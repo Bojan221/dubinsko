@@ -2,8 +2,19 @@ import heroImg from "../../images/hero.png";
 import { FaCheck, FaPhone } from "react-icons/fa6";
 import { useMediaQuery } from "react-responsive";
 import { FaChevronDown } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function HeroSection() {
+
+    useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      once: true
+    });
+  }, []);
+
   const isDesktop = useMediaQuery({
     query: "(min-width:1024px)",
   });
@@ -12,7 +23,7 @@ function HeroSection() {
     <div className="w-full">
       {/* Hero Section */}
       <div
-        className="min-h-150 lg:h-165 flex relative overflow-hidden"
+        className="min-h-150 lg:h-[calc(100vh-80px)] flex relative overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 0.6) 100%), url(${heroImg})`,
           backgroundPosition: "right center",
@@ -22,7 +33,7 @@ function HeroSection() {
       >
         <div className="w-[95%] sm:w-[90%] md:w-[80%] mx-auto flex justify-between py-15">
           {/* title */}
-          <div className="flex flex-col justify-between">
+          <div className="flex flex-col justify-between" data-aos="fade-right">
             <div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 leading-tight">
                 Dubinsko
@@ -67,6 +78,7 @@ function HeroSection() {
             </div>
             {/* buttons */}
             <div className="flex flex-col sm:flex-row gap-4 max-sm:px-15">
+              <a href="tel:+38776302999"></a>
               <button className="flex items-center justify-center cursor-pointer gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-blue-600/30">
                 <FaPhone size={18} />
                 <div className="text-left">
@@ -84,7 +96,7 @@ function HeroSection() {
 
           {/* discount */}
           {isDesktop && (
-            <div className="flex justify-end items-end">
+            <div className="flex justify-end items-end" data-aos="fade-left">
               <div className="w-40 h-40 rounded-full border-dotted border-4 border-blue-600 flex flex-col items-center justify-center bg-blue-600/20 backdrop-blur-md shadow-xl">
                 <div className="text-4xl font-bold text-blue-500">20%</div>
                 <div className="text-white font-semibold text-center mt-2 text-sm">

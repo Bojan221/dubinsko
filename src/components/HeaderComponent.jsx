@@ -4,6 +4,8 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import { FaCalendarDays } from "react-icons/fa6";
 import { IoMenuOutline, IoClose } from "react-icons/io5";
+import AOS from "aos";
+import "aos/dist/aos.css"
 
 function HeaderComponent() {
   const [showMenu, setShowMenu] = useState(false);
@@ -19,6 +21,13 @@ function HeaderComponent() {
   const isSmallMobile = useMediaQuery({
     query: "(max-width:640px)",
   });
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -109,13 +118,13 @@ function HeaderComponent() {
   return (
     <>
       {/* normal */}
-      <div className="bg-white dark:bg-black py-3 shadow-md">
+      <div className="bg-black py-3 shadow-md" data-aos="fade-down">
         {headerContent}
       </div>
 
       {/* sticky */}
       <div
-        className={`fixed top-0 left-0 w-full z-50 bg-white dark:bg-black shadow-md transition-transform py-3 duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 w-full z-50 bg-black shadow-md transition-transform py-3 duration-300 ease-in-out ${
           showSticky ? "translate-y-0" : "-translate-y-full"
         }`}
       >
