@@ -5,7 +5,18 @@ import { FaMattressPillow } from "react-icons/fa6";
 import { BsHouseFill } from "react-icons/bs";
 import { FaCar } from "react-icons/fa";
 import SingleServiceCard from "./SingleServiceCard";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function ServiceSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      once: true,
+    });
+  }, []);
+
   const services = [
     {
       icon: <FaCar />,
@@ -34,11 +45,17 @@ function ServiceSection() {
   ];
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="w-[95%] sm:w-[90%] md:w-[80%] mx-auto flex flex-col gap-8 py-5">
       <TitleWrapper section="usluge" title="Šta nudimo?" align="center" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {services.map((service) => {
-          return <SingleServiceCard key={service.title} service={service} />;
+        {services.map((service, index) => {
+          return (
+            <SingleServiceCard
+              key={service.title}
+              service={service}
+              data-aos={index === 0 || index === 1 ? "fade-right" : "fade-left"}
+            />
+          );
         })}
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSection from "../components/homepage/HeroSection";
-import ServiceSection from "../components/homepage/ServiceSection"
+import ServiceSection from "../components/homepage/ServiceSection";
+import ResultPhotos from "../components/homepage/ResultPhotos";
 import wallpaper from "../images/wallpaper.png";
 function HomePage() {
   return (
@@ -10,10 +11,10 @@ function HomePage() {
         className="relative bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${wallpaper})` }}
       >
-        <div className="pointer-events-none absolute inset-0 z-0 bg-black/85">
-        </div>
+        <div className="pointer-events-none absolute inset-0 z-0 bg-black/85"></div>
         <div className="relative z-10">
-          <ServiceSection/>
+          <ServiceSection />
+          <ResultPhotos />
         </div>
       </div>
     </div>
