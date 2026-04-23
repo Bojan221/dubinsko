@@ -2,7 +2,9 @@ import React from "react";
 import HeroSection from "../components/homepage/HeroSection";
 import ServiceSection from "../components/homepage/ServiceSection";
 import ResultPhotos from "../components/homepage/ResultPhotos";
+import InfoSection from "../components/homepage/InfoSection";
 import wallpaper from "../images/wallpaper.png";
+
 function HomePage() {
   return (
     <div>

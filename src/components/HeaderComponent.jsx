@@ -5,7 +5,7 @@ import { useMediaQuery } from "react-responsive";
 import { FaCalendarDays } from "react-icons/fa6";
 import { IoMenuOutline, IoClose } from "react-icons/io5";
 import AOS from "aos";
-import "aos/dist/aos.css"
+import "aos/dist/aos.css";
 
 function HeaderComponent() {
   const [showMenu, setShowMenu] = useState(false);
@@ -25,7 +25,7 @@ function HeaderComponent() {
   useEffect(() => {
     AOS.init({
       duration: 1200,
-      once: true
+      once: true,
     });
   }, []);
 
@@ -124,7 +124,7 @@ function HeaderComponent() {
 
       {/* sticky */}
       <div
-        className={`fixed top-0 left-0 w-full z-50 bg-black shadow-md transition-transform py-3 duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 w-full z-20 bg-black shadow-md transition-transform py-3 duration-300 ease-in-out ${
           showSticky ? "translate-y-0" : "-translate-y-full"
         }`}
       >
