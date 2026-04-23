@@ -98,7 +98,7 @@ function ResultPhotos() {
             <img
               src={selectedImage}
               alt="Modal"
-              className="max-w-[90%] max-h-[90%] object-contain rounded-lg"
+              className="max-w-[80%] max-h-[80%] object-contain rounded-lg"
               data-aos="zoom-in"
               onClick={(e) => e.stopPropagation()}
             />
