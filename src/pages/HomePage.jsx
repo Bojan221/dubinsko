@@ -17,6 +17,7 @@ function HomePage() {
         <div className="relative z-10">
           <ServiceSection />
           <ResultPhotos />
+          <InfoSection/>
         </div>
       </div>
     </div>
