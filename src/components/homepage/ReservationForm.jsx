@@ -17,10 +17,18 @@ function ReservationForm() {
   const [phone, setPhone] = useState("");
 
   useEffect(() => {
-    AOS.init({
-      duration: 1500,
-      once: true,
-    });
+    const timeout = setTimeout(() => {
+      AOS.init({
+        duration: 1200,
+        once: true,
+        offset: 150,
+        easing: "ease-out-cubic",
+      });
+
+      AOS.refresh();
+    }, 200);
+
+    return () => clearTimeout(timeout);
   }, []);
 
   const serviceOption = [
@@ -93,7 +101,7 @@ function ReservationForm() {
   };
 
   return (
-    <div className="col-span-12 lg:col-span-3">
+    <div className="col-span-12 xl:col-span-3">
       <div className="flex flex-col gap-4">
         <TitleWrapper
           section={"rezervisi termin"}
@@ -130,12 +138,12 @@ function ReservationForm() {
             )}
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <input
               value={date}
               onChange={(e) => setDate(e.target.value)}
               type="date"
-              className="bg-[#ffffff15] rounded-lg text-gray-200 py-2.5 px-3 w-1/2
+              className="bg-[#ffffff15] rounded-lg text-gray-200 py-2.5 px-3 w-full sm:w-1/2
     [&::-webkit-calendar-picker-indicator]:invert"
             />
 
@@ -143,7 +151,7 @@ function ReservationForm() {
               value={time}
               onChange={(e) => setTime(e.target.value)}
               type="time"
-              className="bg-[#ffffff15] rounded-lg text-gray-200 py-2.5 px-3 w-1/2
+              className="bg-[#ffffff15] rounded-lg text-gray-200 py-2.5 px-3 w-full sm:w-1/2
     [&::-webkit-calendar-picker-indicator]:invert
     [&::-webkit-datetime-edit-fields-wrapper]:text-gray-200
     [&::-webkit-datetime-edit-text]:text-gray-200
@@ -164,7 +172,7 @@ function ReservationForm() {
 
           <div>
             <input
-              type="text"
+              type="tel"
               className="bg-[#ffffff15] rounded-lg text-gray-200 py-2.5 px-3 w-full"
               placeholder="Telefon"
               value={phone}

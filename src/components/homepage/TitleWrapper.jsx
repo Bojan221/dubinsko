@@ -1,6 +1,6 @@
 import React from "react";
 
-function TitleWrapper({ section, title, align }) {
+function TitleWrapper({ section, title, align, wfull }) {
   return (
     <div
       className={`flex flex-col gap-2 md:gap-3 py-7  ${align === "center" ? "items-center" : "items-start"}`}
@@ -11,7 +11,7 @@ function TitleWrapper({ section, title, align }) {
         {section}
       </h5>
       <h2
-        className={`text-white text-[36px] ${align === "center" ? "md:text-[48px] text-center" : "md:text-[32px] lg:w-[60%]"} font-semibold `}
+        className={`text-white text-[36px] ${align === "center" ? "md:text-[48px] text-center" : wfull ? "md:text-[32px] w-full" : "md:text-[32px] lg:w-[60%]"} font-semibold `}
       >
         {title}
       </h2>

@@ -58,7 +58,7 @@ function ResultPhotos() {
         title={"Naši rezultati govore više od riječi"}
         align={"center"}
       />
-      <div data-aos="zoom-in" data-aos-duration="1500">
+      <div>
         <Swiper
           slidesPerView={isMobile ? 1 : 2}
           spaceBetween={30}

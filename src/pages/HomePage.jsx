@@ -4,6 +4,7 @@ import ServiceSection from "../components/homepage/ServiceSection";
 import ResultPhotos from "../components/homepage/ResultPhotos";
 import InfoSection from "../components/homepage/InfoSection";
 import wallpaper from "../images/wallpaper.png";
+import ContactAndSocials from "../components/homepage/ContactAndSocials";
 
 function HomePage() {
   return (
@@ -17,9 +18,10 @@ function HomePage() {
         <div className="relative z-10">
           <ServiceSection />
           <ResultPhotos />
-          <InfoSection/>
+          <InfoSection />
         </div>
       </div>
+      <ContactAndSocials />
     </div>
   );
 }

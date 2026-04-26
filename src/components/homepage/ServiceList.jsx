@@ -25,7 +25,7 @@ function ServiceList() {
   ];
 
   return (
-    <div className="col-span-12 lg:col-span-3">
+    <div className="col-span-12 xl:col-span-3">
       <div className="flex flex-col gap-4">
         <TitleWrapper section="pojedinačne usluge" title="Pojedinačne usluge" />
 

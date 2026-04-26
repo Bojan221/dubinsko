@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
-    <div className="h-750">
+    <div className="h-850">
       <HeaderComponent />
       <Outlet />
       <ToastContainer position="top-right" autoClose={3000} theme="dark" />

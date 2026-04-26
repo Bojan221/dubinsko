@@ -42,7 +42,7 @@ function Packets() {
   ];
 
   return (
-    <div className="col-span-12 lg:col-span-6">
+    <div className="col-span-12 xl:col-span-6">
       <div className="flex flex-col gap-4 w-full">
         <TitleWrapper
           section={"cjenovnik - paketi"}
