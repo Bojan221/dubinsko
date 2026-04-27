@@ -5,7 +5,7 @@ import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
-    <div className="h-850">
+    <div>
       <HeaderComponent />
       <Outlet />
       <FooterComponent/>
