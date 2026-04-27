@@ -1,12 +1,22 @@
-import React from "react";
+import {useEffect} from "react";
 import backgroundImage from "../../images/ContactUsBackground.png";
 import TitleWrapper from "./TitleWrapper";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function ContactAndSocials() {
+  
+  useEffect(()=> { 
+    AOS.init({
+      duration:1500,
+      once:true
+    })
+  },[])
+  
   return (
     <div
       style={{
@@ -19,8 +29,8 @@ function ContactAndSocials() {
     >
       <div className="pointer-events-none absolute inset-0 z-0 bg-black/30"></div>
       <div className="w-[95%] sm:w-[90%] md:w-[80%] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div>
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 lg:gap-4">
+          <div data-aos="fade-right">
             <TitleWrapper
               section="imate pitanje?"
               title="Slobodno nas kontajtirajte"
@@ -31,7 +41,7 @@ function ContactAndSocials() {
               uslugu za Vas.
             </span>
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2" data-aos="fade-up"> 
             <div className="flex gap-2">
               <input
                 type="text"
@@ -53,7 +63,11 @@ function ContactAndSocials() {
               Pošalji poruku <FaTelegramPlane />
             </button>
           </div>
-          <div></div>
+          <div className="flex flex-col xl:ml-10 max-md:w-full gap-4 justify-between px-10 p-5 bg-[#00000065] rounded-lg" data-aos="fade-left">
+            <div className="flex items-center justify-start gap-3 font-semibold text-2xl text-white"><FaPhoneAlt size={40} className="text-blue-600"/> <span>065/302-999</span></div>
+            <div className="flex items-center justify-start gap-3 font-semibold text-2xl text-white"><FaLocationDot size={40} className="text-blue-600"/> <div className="flex flex-col gap-1"><span>Patkovaca, Bijeljina</span><span className="text-gray-200 text-sm">Bosna i Hercegovina</span></div></div>
+            <div className="flex items-center justify-start gap-3 font-semibold text-2xl text-white"><RiInstagramFill size={40} className="text-blue-600"/> <div className="flex flex-col gap-1"><span>@dubinsko_ciscenje_nl</span ><span className="text-gray-200 text-sm">Pratite nas na Instagramu</span></div></div> 
+          </div>
         </div>
       </div>
     </div>
