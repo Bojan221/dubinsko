@@ -5,6 +5,33 @@ body {
   background-color: black;
 }
 
+/* gallery modal slider */
+.gallery-modal-swiper .swiper-button-next,
+.gallery-modal-swiper .swiper-button-prev {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-modal-swiper .swiper-button-next:hover,
+.gallery-modal-swiper .swiper-button-prev:hover {
+  background: #2563eb;
+}
+
+.gallery-modal-swiper .swiper-button-next::after,
+.gallery-modal-swiper .swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.gallery-modal-swiper .swiper-pagination {
+  color: #fff;
+  font-weight: 600;
+}
+
 @keyframes slideInFromRight {
   from {
     transform: translateX(100%);
