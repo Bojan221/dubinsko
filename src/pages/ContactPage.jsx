@@ -60,7 +60,7 @@ function ContactPage() {
         <div className="pointer-events-none absolute inset-0 z-0 bg-black/85"></div>
 
         <div className="relative z-10 w-[95%] sm:w-[90%] md:w-[80%] mx-auto py-12 lg:py-16 flex flex-col gap-12">
-          {/* info boxes */}
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {infoBoxes.map((box, index) => {
               const content = (
@@ -114,7 +114,6 @@ function ContactPage() {
             })}
           </div>
 
-          {/* map + form */}
           <div>
             <TitleWrapper
               section="pišite nam"

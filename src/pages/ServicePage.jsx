@@ -84,7 +84,6 @@ function ServicePage() {
             ))}
           </div>
 
-          {/* closing CTA */}
           <div className="w-[95%] sm:w-[90%] md:w-[80%] mx-auto pb-16">
             <div className="bg-[#ffffff15] border border-white/10 rounded-4xl px-6 py-10 md:p-12 flex flex-col items-center text-center gap-6">
               <TitleWrapper

@@ -78,7 +78,7 @@ function PricePage() {
             id="cjenovnik"
             className="w-[95%] sm:w-[90%] md:w-[80%] mx-auto flex flex-col gap-16 lg:gap-24 py-12 lg:py-20"
           >
-            {/* PAKETI */}
+
             <div className="flex flex-col gap-4">
               <TitleWrapper
                 section="paketi"
@@ -105,7 +105,7 @@ function PricePage() {
                       </span>
                     )}
 
-                    {/* HEADER */}
+
                     <div className="text-center pb-5 border-b border-white/10">
                       <h3 className="text-2xl font-bold text-white">
                         {packet.title}
@@ -123,7 +123,6 @@ function PricePage() {
                       </div>
                     </div>
 
-                    {/* SERVICES */}
                     <div className="mt-6 flex flex-col gap-3 flex-1">
                       {packet.services.map((service, i) => (
                         <span
@@ -139,7 +138,6 @@ function PricePage() {
                       ))}
                     </div>
 
-                    {/* BUTTON */}
                     <button
                       onClick={() => navigate("/contact")}
                       className={`mt-7 py-3 px-4 rounded-xl cursor-pointer w-full font-semibold transition-all duration-300 ${
@@ -155,7 +153,6 @@ function PricePage() {
               </div>
             </div>
 
-            {/* POJEDINAČNE USLUGE */}
             <div className="flex flex-col gap-4">
               <TitleWrapper
                 section="po komadu"
@@ -195,7 +192,6 @@ function PricePage() {
               </p>
             </div>
 
-            {/* CTA */}
             <div data-aos="fade-up">
               <div className="bg-[#ffffff15] border border-white/10 rounded-4xl px-6 py-10 md:p-12 flex flex-col items-center text-center gap-6">
                 <TitleWrapper

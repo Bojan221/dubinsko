@@ -77,7 +77,6 @@ function GalleryPage() {
               align="center"
             />
 
-            {/* GRID */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-2">
               {images.map((image, index) => (
                 <button
@@ -95,7 +94,6 @@ function GalleryPage() {
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
 
-                  {/* overlay */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <span className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white text-lg">
                       <FaSearchPlus />
@@ -111,7 +109,6 @@ function GalleryPage() {
         </div>
       </div>
 
-      {/* MODAL */}
       {isOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/95"
